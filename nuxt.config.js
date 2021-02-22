@@ -3,7 +3,6 @@ const meta = {
   description: "男の娘のための便利ツール集"
 }
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
