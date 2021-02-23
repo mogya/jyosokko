@@ -1,8 +1,8 @@
 {
-  "name": "encodemax",
+  "name": "jyosokko",
   "version": "1.0.0",
-  "description": "EncodeMax : realtime encode/decode tool",
-  "author": "daisuke furukawa",
+  "description": "じょそっこどっとこむ",
+  "author": "みなと かもめ",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -20,6 +20,7 @@
     "encoding-japanese": "^1.0.30",
     "he": "^1.2.0",
     "nuxt": "^2.0.0",
+    "nuxt-svg-loader": "^1.2.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "qrcode": "^1.4.4",
