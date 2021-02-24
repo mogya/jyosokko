@@ -6,18 +6,29 @@ div
         span.italic じょそっこ免許証
 
   #main.container.absolute(class="px-1 lg:px-2 xl:px-2")
-    <LisenseSvg />
+    #license
+      ReactiveLicense(
+        :name="name"
+      )
+    #textarea
+      textarea(
+        v-model="name",
+        placeholder="おなまえ", 
+        autofocus="autofocus", 
+        class="inline shadow border border-gray-700 rounded w-full py-2 px-3 text-black-700 leading-tight md:block focus:outline-none focus:shadow-outline"
+      )  
 </template>
 
 <script>
-import LisenseSvg from '@/assets/images/lisense.svg'
+import ReactiveLicense from '@/components/ReactiveLicense.vue'
 
 export default {
   components: {
-    LisenseSvg
+    ReactiveLicense
   },
   data () {
     return {
+      name: '○○ ○○'
     }
   },
   computed: {
@@ -29,6 +40,6 @@ export default {
 
 <style>
 #main{
-  top: 120px
+  top:  45px
 }
 </style>
