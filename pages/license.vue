@@ -60,6 +60,7 @@ export default {
         { hid: 'og:description', property: this.meta_description,  },
         { hid: 'og:url', property: 'og:url', content: "https://jyosokko.com/license/" },
         { hid: 'og:image', property: 'og:image', content: this.ogp_url },
+        { hid: 'twitter:card', property: 'twitter:card', content: "summary_large_image" },
       ],
     }
   }
