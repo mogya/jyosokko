@@ -46,7 +46,7 @@ export default {
       return `${this.name}さんの${this.license_name}`
     },
     ogp_url: function(){
-      return `http://ogp-builder.com/6EcZK9/https://jyosokko.com/license_ogp/`
+      return `https://ogp-builder.com/6EcZK9/https://jyosokko.com/license_ogp/`
     }
   },
   methods: {
