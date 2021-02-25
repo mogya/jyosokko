@@ -57,9 +57,11 @@ export default {
         { hid: 'description', name: 'description', content: this.meta_description },
         { hid: 'og:type', property: 'og:type', content: "article" },
         { hid: 'og:title', property: 'og:title', content: "じょそっこどっとこむ" },
-        { hid: 'og:description', property: this.meta_description,  },
+        { hid: 'og:description', property: 'og:description', content: this.meta_description,  },
         { hid: 'og:url', property: 'og:url', content: "https://jyosokko.com/license/" },
         { hid: 'og:image', property: 'og:image', content: this.ogp_url },
+        { hid: 'og:image:width', property: 'og:image:width', content: "1135" },
+        { hid: 'og:image:height', property: 'og:image:height', content: "595" },
         { hid: 'twitter:card', property: 'twitter:card', content: "summary_large_image" },
       ],
     }
