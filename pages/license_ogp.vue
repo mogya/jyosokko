@@ -37,5 +37,6 @@ export default {
 <style>
 body{
   width: 1200px;
+  height: 630px;
 }
 </style>
