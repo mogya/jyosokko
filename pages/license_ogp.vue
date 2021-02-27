@@ -35,4 +35,7 @@ export default {
 </script>
 
 <style>
+body{
+  width: 1200px;
+}
 </style>

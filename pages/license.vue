@@ -15,8 +15,8 @@ div
         :qualifications = "qualifications"
       )
     #textareas
-      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
-        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+      div(class="relative mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9")
           | おなまえ
         input(
           v-model="name",
@@ -24,8 +24,8 @@ div
           autofocus="autofocus", 
           class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
         )  
-      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
-        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+      div(class="relative mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9")
           | 生年月日
         input(
           v-model="birthday",
@@ -33,8 +33,8 @@ div
           autofocus="autofocus", 
           class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
         )
-      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
-        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+      div(class="relative mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9")
           | 住所
         input(
           v-model="address",
@@ -42,8 +42,8 @@ div
           autofocus="autofocus", 
           class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
         )
-      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
-        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+      div(class="relative mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9")
           | 条件
         input(
           v-model="qualifications",
@@ -51,8 +51,8 @@ div
           autofocus="autofocus", 
           class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
         )
-      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
-        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+      div(class="relative mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9")
           | 運転免許証
         input(
           v-model="license_name",
@@ -107,7 +107,19 @@ export default {
 </script>
 
 <style>
+body{
+  width: 1200px;
+}
 #main{
   top:  45px
+}
+#license{
+  margin-bottom: 10px;
+}
+#textareas{
+  width: 1200px;
+}
+#textareas label{
+  width: 5rem;
 }
 </style>
