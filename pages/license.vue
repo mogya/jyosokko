@@ -15,14 +15,51 @@ div
         :qualifications = "qualifications"
       )
     #textareas
-      label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
-        | おなまえ
-      textarea(
-        v-model="name",
-        placeholder="山田 花子",
-        autofocus="autofocus", 
-        class="inline shadow border border-gray-700 rounded w-full py-2 px-3 text-black-700 leading-tight md:block focus:outline-none focus:shadow-outline"
-      )  
+      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+          | おなまえ
+        input(
+          v-model="name",
+          placeholder="山田 花子",
+          autofocus="autofocus", 
+          class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
+        )  
+      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+          | 生年月日
+        input(
+          v-model="birthday",
+          placeholder="平成○○年○○月○○日生",
+          autofocus="autofocus", 
+          class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
+        )
+      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+          | 住所
+        input(
+          v-model="address",
+          placeholder="○○県○○市○○町",
+          autofocus="autofocus", 
+          class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
+        )
+      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+          | 条件
+        input(
+          v-model="qualifications",
+          placeholder="眼鏡等",
+          autofocus="autofocus", 
+          class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
+        )
+      div(class="relative mb-3 flex justify-center mb-3 flex justify-center md:flex md:items-center")
+        label(class="block text-black-500 font-bold text-right text-sm mr-1 leading-9" style="width: 10rem;")
+          | 運転免許証
+        input(
+          v-model="license_name",
+          placeholder="運転免許証",
+          autofocus="autofocus", 
+          class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight"
+        )
 </template>
 
 <script>
@@ -35,7 +72,7 @@ export default {
   data () {
     return {
       name: '○○ ○○',
-      birthday: '平成○○年○○月○○日生',
+      birthday: '平成01年 01月 01日生',
       address: '○○県○○市○○町',
       license_name: '運転免許証',
       qualifications: '眼鏡等',
