@@ -16,15 +16,19 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/firebase": "^7.5.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "encoding-japanese": "^1.0.30",
+    "firebase": "^8.2.9",
     "he": "^1.2.0",
     "nuxt": "^2.0.0",
     "nuxt-svg-loader": "^1.2.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "qrcode": "^1.4.4",
-    "unicodechar-string": "^1.0.0"
+    "unicodechar-string": "^1.0.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",
