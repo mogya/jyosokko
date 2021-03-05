@@ -1,14 +1,11 @@
-<template lang="pug">
-div
-  #main.container.absolute(class="px-1 lg:px-2 xl:px-2")
-    #license
-      ReactiveLicense(
-        :name = "name",
-        :birthday = "birthday",
-        :address = "address",
-        :license_name = "license_name",
-        :qualifications = "qualifications"
-      )
+<template lang="html">
+<div>
+  <div class="container absolute px-1 lg:px-2 xl:px-2" id="main">
+    <div id="license">
+      <ReactiveLicense :name="name" :birthday="birthday" :address="address" :license_name="license_name" :qualifications="qualifications"></ReactiveLicense>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -32,7 +29,11 @@ export default {
   methods: {
   },
   async asyncData({ query }) {
-    return query;
+    let ret = {};
+    ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
+      ret[key] = decodeURIComponent(query[key].replace(/\+/g, ' '));
+    })
+    return ret;
   }
 }
 </script>

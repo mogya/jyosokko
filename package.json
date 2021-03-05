@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
@@ -24,7 +25,6 @@
     "he": "^1.2.0",
     "nuxt": "^2.0.0",
     "nuxt-svg-loader": "^1.2.0",
-    "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "qrcode": "^1.4.4",
     "unicodechar-string": "^1.0.0",

@@ -1,9 +1,9 @@
-<template lang="pug">
-div
-  #header.container.fixed.right-0.left-0.top-0.bg-white.px-1.z-10
-    #title-area
-      span#title-logo.font-serif.text-3xl.w-8
-        span.italic じょそっこ
+<template lang="html">
+<div>
+  <div class="container fixed right-0 left-0 top-0 bg-white px-1 z-10" id="header">
+    <div id="title-area"><span class="font-serif text-3xl w-8" id="title-logo"><span class="italic">じょそっこ</span></span></div>
+  </div>
+</div>
 </template>
 
 <script>
