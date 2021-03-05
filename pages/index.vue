@@ -17,14 +17,12 @@ export default {
   computed: {
   },
   methods: {
-  },
+  }
 }
 </script>
 
 <style>
 #main{
   top: 120px
-}
-#title-area textarea{
 }
 </style>

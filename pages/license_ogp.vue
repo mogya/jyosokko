@@ -21,7 +21,7 @@ export default {
   data () {
     return {
       name: '○○ ○○',
-      birthday: '平成○○年○○月○○日生',
+      birthday: '平成○年○月○日生',
       address: '○○県○○市○○町',
       license_name: '運転免許証',
       qualifications: '眼鏡等',
@@ -31,6 +31,9 @@ export default {
   },
   methods: {
   },
+  async asyncData({ query }) {
+    return query;
+  }
 }
 </script>
 
