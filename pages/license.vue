@@ -83,7 +83,9 @@ export default {
   async asyncData({ query }) {
     let ret = {};
     ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
-      ret[key] = decodeURIComponent(query[key].replace(/\+/g, ' '));
+      if (query[key]){
+        ret[key] = decodeURIComponent(query[key].replace(/\+/g, ' '))
+      }
     })
     return ret;
   },
