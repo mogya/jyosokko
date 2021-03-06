@@ -28,15 +28,16 @@ export default {
   },
   methods: {
   },
-  async asyncData({ query }) {
-    let ret = {};
-    ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
-      if (query[key]){
-        ret[key] = decodeURIComponent(query[key].replace(/\+/g, ' '))
-      }
-    })
-    return ret;
-  }
+  created() {
+    if (process.client) {
+      const query = this.$route.query;
+      ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
+        if (query[key]){
+          this[key] = decodeURIComponent(query[key].replace(/\+/g, ' '))
+        }
+      })
+    }
+  },
 }
 </script>
 

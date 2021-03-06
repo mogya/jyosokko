@@ -28,13 +28,11 @@
         <label class="block text-black-500 font-bold text-right text-sm mr-1 leading-9">運転免許証</label>
         <input class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight" v-model="license_name" placeholder="運転免許証" autofocus="autofocus"/>
       </div>
-      <div class="relative mb-3 flex justify-center md:flex md:items-center">
-        <label class="block text-black-500 font-bold text-right text-sm mr-1 leading-9">おなまえ</label>
-        <input class="flex-1 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-1 px-1 text-gray-700 leading-tight" v-model="name" placeholder="山田 花子" autofocus="autofocus"/>
-      </div>
-      <div class="relative mb-3 flex justify-center md:flex md:items-center">
-        <font-awesome-icon :icon="['fab', 'twitter']" />
-        <a :href="share_url">オリジナル免許証をtwitterでシェア</a>
+      <div class="relative mb-3 flex justify-left md:flex md:items-left">
+        <p>
+          <font-awesome-icon :icon="['fab', 'twitter']" />
+          <a class="underline" :href="share_url">オリジナル免許証をtwitterでシェア</a>
+        </p>
       </div>
     </div>
   </div>
@@ -80,14 +78,15 @@ export default {
   },
   methods: {
   },
-  async asyncData({ query }) {
-    let ret = {};
-    ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
-      if (query[key]){
-        ret[key] = decodeURIComponent(query[key].replace(/\+/g, ' '))
-      }
-    })
-    return ret;
+  created() {
+    if (process.client) {
+      const query = this.$route.query;
+      ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
+        if (query[key]){
+          this[key] = decodeURIComponent(query[key].replace(/\+/g, ' '))
+        }
+      })
+    }
   },
   head () {
     return {

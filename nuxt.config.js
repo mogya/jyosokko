@@ -3,9 +3,7 @@ const meta = {
   description: "男の娘のための便利ツール集"
 }
 export default {
-  /*
-  ** Headers of the page
-  */
+  target: 'static',
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -76,9 +74,7 @@ export default {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    ssr: 'false',
     extend (config, ctx) {
     }
   },
