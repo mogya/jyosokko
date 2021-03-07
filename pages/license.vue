@@ -59,42 +59,42 @@ export default {
     }
   },
   computed: {
-    meta_description: function(){
+    title: function(){
       return `${this.name}さんの${this.license_name}`
     },
     ogp_url: function(){
       return `https://ogp-builder.com/6EcZK9/https://jyosokko.com/license_ogp/`
     },
     share_url: function(){
-      return `https://twitter.com/intent/tweet?text=素敵な免許証を作ったよ&url=${encodeURIComponent(this.page_url)}`
+      return `https://twitter.com/intent/tweet?text=${encodeURI(this.title)}&url=${encodeURIComponent(this.page_url)}`
     },
     page_url: function(){
       let url = "https://jyosokko.com/license?";
       ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
-        url = url + `${key}=${this[key]}&`
+        url = url + `${key}=${encodeURI(this.$data[key])}&`
       })
       return url.replace(/&$/, '');
     }
   },
   methods: {
   },
-  created() {
+  mounted() {
     if (process.client) {
       const query = this.$route.query;
       ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
         if (query[key]){
-          this[key] = decodeURIComponent(query[key].replace(/\+/g, ' '))
+          this.$set(this.$data, key, decodeURIComponent(query[key].replace(/\+/g, ' ')));
         }
-      })
+      }, this);
     }
   },
   head () {
     return {
       meta: [
-        { hid: 'description', name: 'description', content: this.meta_description },
+        { hid: 'description', name: 'description', content: this.title },
         { hid: 'og:type', property: 'og:type', content: "article" },
         { hid: 'og:title', property: 'og:title', content: "じょそっこどっとこむ" },
-        { hid: 'og:description', property: 'og:description', content: this.meta_description,  },
+        { hid: 'og:description', property: 'og:description', content: this.title,  },
         { hid: 'og:url', property: 'og:url', content: "https://jyosokko.com/license/" },
         { hid: 'og:image', property: 'og:image', content: this.ogp_url },
         { hid: 'og:image:width', property: 'og:image:width', content: "1135" },

@@ -28,14 +28,14 @@ export default {
   },
   methods: {
   },
-  created() {
+  mounted() {
     if (process.client) {
       const query = this.$route.query;
       ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
         if (query[key]){
-          this[key] = decodeURIComponent(query[key].replace(/\+/g, ' '))
+          this.$set(this.$data, key, decodeURIComponent(query[key].replace(/\+/g, ' ')));
         }
-      })
+      }, this);
     }
   },
 }
