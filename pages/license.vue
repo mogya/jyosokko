@@ -63,13 +63,17 @@ export default {
       return `${this.name}さんの${this.license_name}`
     },
     ogp_url: function(){
-      return `https://ogp-builder.com/6EcZK9/https://jyosokko.com/license_ogp/`
+      let url = "https://jyosokko.com/license_ogp/?";
+      ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
+        url = url + `${key}=${encodeURI(this.$data[key])}&`
+      })
+      return url.replace(/&$/, '');
     },
     share_url: function(){
       return `https://twitter.com/intent/tweet?text=${encodeURI(this.title)}&url=${encodeURIComponent(this.page_url)}`
     },
     page_url: function(){
-      let url = "https://jyosokko.com/license?";
+      let url = "https://jyosokko.com/license/?";
       ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
         url = url + `${key}=${encodeURI(this.$data[key])}&`
       })
