@@ -63,7 +63,7 @@ export default {
       return `${this.name}さんの${this.license_name}`
     },
     ogp_url: function(){
-      let url = "https://jyosokko.com/license_ogp/?";
+      let url = "https://ogp-builder.com/6EcZK9/https://jyosokko.com/license_ogp/?";
       ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
         url = url + `${key}=${encodeURI(this.$data[key])}&`
       })
@@ -94,19 +94,18 @@ export default {
   },
   head () {
     return {
+      title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: this.title },
-        { hid: 'og:type', property: 'og:type', content: "article" },
-        { hid: 'og:title', property: 'og:title', content: "じょそっこどっとこむ" },
-        { hid: 'og:description', property: 'og:description', content: this.title,  },
-        { hid: 'og:url', property: 'og:url', content: "https://jyosokko.com/license/" },
-        { hid: 'og:image', property: 'og:image', content: this.ogp_url },
-        { hid: 'og:image:width', property: 'og:image:width', content: "1135" },
-        { hid: 'og:image:height', property: 'og:image:height', content: "595" },
-        { hid: 'twitter:card', property: 'twitter:card', content: "summary_large_image" },
+        { property: 'og:title', content: this.title },
+        { property: 'og:type', content: "article" },
+        { property: 'og:url', content: this.page_url },
+        { property: 'og:image', content: this.ogp_url },
+        { property: 'og:image:width', content: "1135" },
+        { property: 'og:image:height', content: "595" },
+        { property: 'twitter:card', content: "summary_large_image" },
       ],
     }
-  }
+  },
 }
 </script>
 
