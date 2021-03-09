@@ -82,7 +82,7 @@ export default {
   },
   methods: {
   },
-  mounted() {
+  created() {
     if (process.client) {
       const query = this.$route.query;
       ["name", "birthday", "address", "license_name", "qualifications"].forEach(key=>{
