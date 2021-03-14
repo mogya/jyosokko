@@ -1,15 +1,9 @@
-const meta = {
-  title: "じょそっこどっとこむ",
-  description: "男の娘のための便利ツール集"
-}
 export default {
   target: 'static',
   head: {
-    title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: meta.description },
       { hid: 'og:site_name', property: 'og:site_name', content: "じょそっこどっとこむ" },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://jyosokko.com/' },
@@ -76,6 +70,9 @@ export default {
     ssr: 'false',
     extend (config, ctx) {
     }
+  },
+  generate: { 
+    dir: 'public' 
   },
   /*
   ** Dev server
