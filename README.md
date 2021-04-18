@@ -21,4 +21,4 @@ $ yarn generate
 
 ## deploy
 
-[予定] netlify.com で配信しています。MasterブランチをGithubにPushすると自動で更新されます
+github actionをつかってFirebase hostingにホストされています
